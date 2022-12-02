@@ -1,0 +1,47 @@
+<!--pages/inputdataWin/inputdataWin.wxml-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}"> 
+   
+  <!--drawer content-->  
+  <view class="drawer_title">预约</view> 
+  <view class="drawer_content"> 
+    <view class="top grid"> 
+      <label class="title col-0">姓名</label> 
+      <input class="input_base input_h30 col-1" placeholder="请输入姓名" bindinput="bindInputChange"></input> 
+    </view> 
+    <view class="top grid"> 
+      <!-- <label class="title col-0">预约时间</label>  -->
+      <picker mode="date" value="{{date}}" bindchange="changeDate">
+        <view class="tui-picker-detail">
+          日期 {{date}}
+        </view>
+      </picker>
+    </view> 
+    <view class="top grid"> 
+      <picker mode="time" value="{{time}}" bindchange="changeTime">
+        <view class="tui-picker-detail">
+          时间 {{time}} 
+        </view>
+      </picker>
+    </view> 
+    <view class="top grid"> 
+      <!-- <label class="title col-0">体育馆</label>  -->
+      <view class="classify-kuangjia2">
+        <view style="margin-left:10px;">体育馆</view>
+        <!-- 下拉框 -->
+        <view class='classify' bindtap='bindShowMsg'>
+          <view style="display:inline-block;">{{type!=''?type:'--请选择--'}}</view>
+          <image class="classify-tupian" src='/images/classify.png'></image>
+          <!-- 下拉需要显示的列表 -->
+          <view class="select_box" wx:if="{{select}}">
+            <view wx:for="{{types}}" wx:key="unique">
+              <view class="select_one" catchtap="mySelect" data-type="{{item}}">{{item}}</view>
+            </view>
+          </view>
+        </view>
+        
+      </view>
+    </view> 
+    
+  </view> 
+  <view class="btn_ok" bindtap="powerDrawer" data-status="close">确定</view> 
+</view>
