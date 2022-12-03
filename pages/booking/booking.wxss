@@ -1,60 +1,155 @@
 /* pages/booking/booking.wxss */
+.page_col{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.side{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
 .top{
   display: flex;
   flex-direction: row;
-  margin-left: 5%;
-  margin-top: 5%;
-  height: 25px;
-  justify-content: space-between;
+  /* margin-left: 5%; */
+  /* margin-top: 5%; */
+  height: 35px;
+  /* justify-content: space-between; */
   align-items: center;
   position:relative;
 }
-
+.xh_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20rpx; */
+}
 .xh{
   height: 25px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
+  /* position: absolute; */
+  /* left: 0px;
+  top: 0px; */
 }
 .label_25h{
   height: 25px;
   line-height: 25px; 
 }
-
+.right_side{
+  display: flex;
+  position: absolute;
+  right: 40rpx;
+}
+.left_side{
+  display: flex;
+  position: absolute;
+  left: 40rpx;
+}
 .classify{
-  padding-left: 10px;
+  display: flex;
+  /* padding-left: 10px; */
   align-items: center;
-  justify-content: flex-end;
-  position:relative;
-  margin-right: 20px;
+  justify-content: center;
+  /* justify-content: flex-end; */
+  /* position:relative; */
+  position: absolute;
+  
 }
 .classify-tupian{
-  width: 25px;
-  height: 25px;
-  position: relative;
-  right: 0px;
-  top: 0px;
+  width: 20px;
+  height: 20px;
+  /* position: relative; */
+}
+.select_view{
+  /* display: flex; */
+  top:0rpx;
+  width: 180rpx;
+  height: 170rpx;
+  z-index: 100;
+  overflow: hidden;
+  animation: myclassify 1s;
+  position: absolute;
 }
 .select_box{
-  width: 40%;
+  width: 100%;
+  height: 90%;
+  position: relative;
   background-color: rgb(82, 79, 79);
+  border-radius: 18rpx;
+  top: 13rpx;
+  display: flex;
+  flex-direction: column;
+}
+.triangle{
   position: absolute;
-  /* right: 0px; */
-  top:30px;
-  animation: myclassify 1s;
-  overflow: hidden;
-  margin-top:5px ;
+  right: 16rpx;
+  width: 20rpx;
+  height: 20rpx;
+  top: 5rpx;
+  align-items: center;
+  justify-content: center;
+  transform-origin:50% 50%;
+  transform: rotate(45deg);
+  background-color: rgb(82, 79, 79);
 }
 .select_one {
-  padding-left: 20rpx;
+  /* padding-right: 20rpx; */
+  display: flex;
   width: 100%;
-  height: 60rpx;
+  height: 50rpx;
   position: relatiave;
-  line-height: 60rpx;
+  line-height: 50rpx;
   /* border-bottom: 1px solid #ccc; */
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.select_one_img{
+  position: relatiave;
+  /* justify-content: center; */
+  width: 100%;
+  height: 100%;
+}
+.select_one_text{
+  height: 50rpx;
+  position: relatiave;
+  line-height: 50rpx;
   color: white;
+  /* justify-content: center; */
+  align-items: center;
+  font-size: 10px;
+  /* margin: 10rpx; */
 }
 .grid { display: -webkit-box; display: box; } 
 .col-0 {-webkit-box-flex:0;box-flex:0;} 
 .col-1 {-webkit-box-flex:1;box-flex:1;} 
 .col-2 {-webkit-box-flex:2;box-flex:2;} 
+
+.book_page{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: white;
+}
+.bold{
+  font-weight: bold;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+.search{
+  display: flex;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+}

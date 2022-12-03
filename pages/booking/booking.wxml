@@ -1,26 +1,42 @@
 <!--pages/booking/booking.wxml-->
-<view style="height: 100%;width: 100%;">
-  <view>
-    <view class='top'>
-      <view class="label_25h"><image class="xh" mode="heightFix" src='/images/sudaxh.jpg'></image></view>
-      <view class="label_25h">场馆预约管理系统</view>
-      <!-- 下拉框 -->
-      <view class='classify' bindtap='bindShowMsg'>
-        <image class="classify-tupian" src='/images/select_button.png'></image>
-        <!-- 下拉需要显示的列表 -->
-        <view class="select_box" wx:if="{{select}}">
-          <view wx:for="{{opts}}" wx:key="unique">
-            <view class="select_one" catchtap="mySelect" data-opt="{{item}}">{{item}}</view>
+<view class="page_col">
+  <!-- 顶部栏 -->
+  <view class='top'>
+    <view class="xh_content side"><image class="xh" mode="heightFix" src='/images/sudaxh.jpg'></image></view>
+    <view class="label_25h">场馆预约管理系统</view>
+    <!-- 下拉框 -->
+    <view class='classify right_side' bindtap='bindShowMsg'>
+      <image class="classify-tupian" src='/images/select_button.png'></image>  
+    </view>
+  </view>
+  <!-- 图片栏 -->
+  <view style="position: relative; width: 100%; background: #ffffff; height: 25%">
+    <image  src='/images/suda.jpg' style="width: 100%;height:400rpx;top: 13rpx; position: relative;opacity:90%"></image>
+    <!-- 下拉需要显示的列表 -->
+    <view class="right_side select_view" wx:if="{{select}}">
+      <view class="triangle"></view>
+      <view class="select_box">
+        <view wx:for="{{opts}}" wx:key="unique" style="position: relative;">
+          <view class="select_one" catchtap="mySelect" data-opt="{{item}}">
+            <view style="width: 40rpx;height: 30rpx;margin: 15rpx;display: flex;"><image class="select_one_img" src="/images/book.png"></image></view>
+            <view class="select_one_text">{{item}}</view>
           </view>
         </view>
       </view>
     </view>
     
   </view>
-  <view style="position: relative; width: 100%; background: #ffffff; height: 25%;  left: 0rpx">
-    <image  src='/images/suda.jpg' style="width: 100%;height:390rpx; position: relative;opacity:90%"></image>
+  <!-- 预约详情 -->
+  <view class="book_page">
+    <view class="right_side left_side center col" style="background-color: white;border-radius: 5rpx;top: -22rpx;">
+      <view class="bold" style="margin: 37rpx 0rpx 15rpx 0rpx;">我的预约</view>
+      <view class="search col">
+        input
+      </view>
+    </view>
+    
   </view>
-  <view style="position: relative; background: white; height: 164rpx; display: flex; box-sizing: border-box; top: -44rpx; border-radius: 10px; margin-left: 5%; margin-right: 5%; width: 674rpx; left: 1rpx;box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.15);"></view>
+  <!-- <view style="position: relative; background: white; height: 164rpx; display: flex; box-sizing: border-box; top: -44rpx; border-radius: 10px; margin-left: 5%; margin-right: 5%; width: 674rpx; left: 1rpx;box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.15);"></view> -->
 </view>
 
 
